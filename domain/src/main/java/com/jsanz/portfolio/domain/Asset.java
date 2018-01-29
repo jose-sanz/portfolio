@@ -14,8 +14,8 @@ public class Asset {
 	@Field("type")
 	private AssetTypeEnum type;
 	
-	@Field("morningstar_id")
-	private String morningstarId;
+	@Field("third_party_id")
+	private String thirdPartyId;
 
 	@Field("currency")
 	private Currency currency;
@@ -24,11 +24,11 @@ public class Asset {
 		super();
 	}
 
-	public Asset(String name, AssetTypeEnum type, String morningstarId, Currency currency) {
+	public Asset(String name, AssetTypeEnum type, String thirdPartyId, Currency currency) {
 		super();
 		this.name = name;
 		this.type = type;
-		this.morningstarId = morningstarId;
+		this.thirdPartyId = thirdPartyId;
 		this.currency = currency;
 	}
 
@@ -49,11 +49,11 @@ public class Asset {
 	}
 
 	public String getMorningstarId() {
-		return morningstarId;
+		return thirdPartyId;
 	}
 
-	public void setMorningstarId(String morningstarId) {
-		this.morningstarId = morningstarId;
+	public void setThirdPartyId(String thirdPartyId) {
+		this.thirdPartyId = thirdPartyId;
 	}
 
 	public Currency getCurrency() {

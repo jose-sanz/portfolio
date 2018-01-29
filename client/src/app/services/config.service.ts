@@ -8,11 +8,10 @@ export class ConfigService {
 
   private config: Configuration;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   load(url: string) {
-    console.log('load');
-    return this.httpClient.get<Configuration>(url)
+    return this.http.get<Configuration>(url)
       .toPromise()
       .then(config => this.config = config);
   }
